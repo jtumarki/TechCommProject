@@ -31,8 +31,8 @@ background: #50aed7 url(images/headerbg.png) no-repeat top;
 margin: -64px 0 0 0;
 height: 64px;
 -moz-box-shadow: 0 1px 5px #333;
-03.-webkit-box-shadow: 0 1px 5px #333;
-04.box-shadow: 0 1px 5px #333;
+-webkit-box-shadow: 0 1px 5px #333;
+box-shadow: 0 1px 5px #333;
 }
 #container {
 width: 1000px;
@@ -75,14 +75,15 @@ font: 22px/24px 'GillSans', sans-serif;
 color: #cecece;
 border: none;
 padding: 10px;
+width: 385px;
 margin: 0;
 -moz-border-radius: 8px;
 -webkit-border-radius: 8px;
 -khtml-border-radius: 8px;
 border-radius: 8px;
 -moz-box-shadow: 1px 1px 5px #555;
-03.-webkit-box-shadow: 1px 1px 5px #555;
-04.box-shadow: 1px 1px 5px #555;
+-webkit-box-shadow: 1px 1px 5px #555;
+box-shadow: 1px 1px 5px #555;
 float: left;
 }
 .glass {
