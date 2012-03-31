@@ -23,6 +23,11 @@ if (isset($_POST['Submit1'])) {
 	$selected_interest = clean($_POST['interest']);
 	$selected_teaching = clean($_POST['teaching']);
 	$selected_course = clean($_POST['course']);
+	
+	//get course number and instructor from URL
+	$course_num = $_GET['course_num'];
+	$fname = $_GET['fname'];
+	$lname = $_GET['lname'];
 
 	if ($selected_easiness != '') {
 		$easiness_status = 'checked';
@@ -68,7 +73,7 @@ if (isset($_POST['Submit1'])) {
 		//add 1 to current num_ratings when inserting back in
 		
 		//Create query
-		$qry="SELECT * FROM ratings WHERE course_num = '$course_num' AND instructor = '$instructor' ";
+		$qry="SELECT * FROM ratings WHERE course_num = '$course_num' AND fname = '$fname' AND lname = '$lname' ";
 		$result=mysql_query($qry);
 		
 		//do some calculations
