@@ -25,22 +25,22 @@ if (isset($_POST['Submit1'])) {
 		echo 'Selected Easiness: '.$selected_easiness.'</br>';
 	}
 	
-	else if ($selected_helpful != '') {
+	if ($selected_helpful != '') {
 		$helpful_status = 'checked';
 		echo 'Selected Helpfulness: '.$selected_helpful.'</br>';
 	}
 	
-	else if ($selected_interest != '') {
+	if ($selected_interest != '') {
 		$interest_status = 'checked';
 		echo 'Selected Interest: '.$selected_interest.'</br>';
 	}
 	
-	else if ($selected_teaching != '') {
+	if ($selected_teaching != '') {
 		$teaching_status = 'checked';
 		echo 'Selected Teaching Overall: '.$selected_teaching.'</br>';
 	}
 	
-	else if ($selected_course != '') {
+	if ($selected_course != '') {
 		$course_status = 'checked';
 		echo 'Selected Course Overall: '.$selected_course.'</br>';
 	}
