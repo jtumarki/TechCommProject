@@ -22,7 +22,7 @@ else {
 			echo '<td> '.$row['instructor'].' </td>';
 			echo '</tr>';
 			}
-		echo '</table'>;
+		echo '</table>';
 		}
 	}
 ?>
