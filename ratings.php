@@ -126,4 +126,6 @@ if (isset($_POST['Submit1'])) {
 	
 	}
 	
+}
+	
 ?>
