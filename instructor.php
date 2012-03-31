@@ -2,24 +2,25 @@
 $con = mysql_connect ("logindbthedrick.db.7857300.hostedresource.com", "logindbthedrick","JsJt20!2tc221");
 mysql_select_db ("logindbthedrick", $con);
 
-$course_num = $_GET['course'];
+$fname = $_GET['fname'];
+$lname = $_GET['lname'];
 
 if($course_num == NULL)
-	echo 'Please search a valid course.';
+	echo 'Please search a valid instructor.';
 else {
-	$sql = mysql_query("select * from classData where course_num like '%$course_num%'");
+	$sql = mysql_query("select * from classData where fname like '%$fname%' and lname like '%$lname%");
 
-	echo "Course:  $course_num";
+	echo "Instructor:  $fname $lname";
 
 	if(mysql_num_rows($sql) == 0){
-		echo 'This is not a valid course.  Please try again.';
+		echo 'This is not a valid instructor.  Please try again.';
 	}
 	else{
 		echo '<table>';
 		while ($row = mysql_fetch_array($sql)){
 			echo '<tr>';
 			echo '<td class="coursenum"> '.$row['course_num'].' </td>';
-			echo '<td> '.$row['instructor'].' </td>';
+			echo '<td> '.$row['title'].' </td>';
 			echo '</tr>';
 			}
 		echo '</table>';

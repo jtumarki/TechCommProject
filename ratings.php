@@ -7,44 +7,40 @@ $teaching_status = 'unchecked';
 $course_status = 'unchecked';
 
 
-	//Function to sanitize values received from the form. Prevents SQL injection
-	function clean($str) {
-		$str = @trim($str);
-		if(get_magic_quotes_gpc()) {
-			$str = stripslashes($str);
-		}
-		return mysql_real_escape_string($str);
-	}
-
 if (isset($_POST['Submit1'])) {
 	
-	$selected_easiness = clean($_POST['easiness']);
-	$selected_helpful = clean($_POST['helpful']);
-	$selected_interest = clean($_POST['interest']);
-	$selected_teaching = clean($_POST['teaching']);
-	$selected_course = clean($_POST['course']);
+	$selected_easiness = $_POST['easiness'];
+	$selected_helpful = $_POST['helpful'];
+	$selected_interest = $_POST['interest'];
+	$selected_teaching = $_POST['teaching'];
+	$selected_course = $_POST['course'];
+	
+	//get course number and instructor from URL
+	$course_num = $_GET['course_num'];
+	$fname = $_GET['fname'];
+	$lname = $_GET['lname'];
 
 	if ($selected_easiness != '') {
 		$easiness_status = 'checked';
 		echo 'Selected Easiness: '.$selected_easiness.'</br>';
 	}
 	
-	else if ($selected_helpful != '') {
+	if ($selected_helpful != '') {
 		$helpful_status = 'checked';
 		echo 'Selected Helpfulness: '.$selected_helpful.'</br>';
 	}
 	
-	else if ($selected_interest != '') {
+	if ($selected_interest != '') {
 		$interest_status = 'checked';
 		echo 'Selected Interest: '.$selected_interest.'</br>';
 	}
 	
-	else if ($selected_teaching != '') {
+	if ($selected_teaching != '') {
 		$teaching_status = 'checked';
 		echo 'Selected Teaching Overall: '.$selected_teaching.'</br>';
 	}
 	
-	else if ($selected_course != '') {
+	if ($selected_course != '') {
 		$course_status = 'checked';
 		echo 'Selected Course Overall: '.$selected_course.'</br>';
 	}
@@ -68,7 +64,7 @@ if (isset($_POST['Submit1'])) {
 		//add 1 to current num_ratings when inserting back in
 		
 		//Create query
-		$qry="SELECT * FROM ratings WHERE course_num = '$course_num' AND instructor = '$instructor' ";
+		$qry="SELECT * FROM ratings WHERE course_num = '$course_num' AND fname = '$fname' AND lname = '$lname' ";
 		$result=mysql_query($qry);
 		
 		//do some calculations
@@ -120,5 +116,7 @@ if (isset($_POST['Submit1'])) {
 		echo 'Not all fields were checked. Please select a value for all rating categories </br>';
 	
 	}
+	
+}
 	
 ?>
