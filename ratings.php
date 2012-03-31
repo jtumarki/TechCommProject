@@ -7,22 +7,13 @@ $teaching_status = 'unchecked';
 $course_status = 'unchecked';
 
 
-	//Function to sanitize values received from the form. Prevents SQL injection
-	function clean($str) {
-		$str = @trim($str);
-		if(get_magic_quotes_gpc()) {
-			$str = stripslashes($str);
-		}
-		return mysql_real_escape_string($str);
-	}
-
 if (isset($_POST['Submit1'])) {
 	
-	$selected_easiness = clean($_POST['easiness']);
-	$selected_helpful = clean($_POST['helpful']);
-	$selected_interest = clean($_POST['interest']);
-	$selected_teaching = clean($_POST['teaching']);
-	$selected_course = clean($_POST['course']);
+	$selected_easiness = $_POST['easiness'];
+	$selected_helpful = $_POST['helpful'];
+	$selected_interest = $_POST['interest'];
+	$selected_teaching = $_POST['teaching'];
+	$selected_course = $_POST['course'];
 	
 	//get course number and instructor from URL
 	$course_num = $_GET['course_num'];
