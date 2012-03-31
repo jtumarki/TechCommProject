@@ -17,14 +17,8 @@ echo '</div>
 echo '<table>';
 while ($row = mysql_fetch_array($sql)){
 	echo '<tr>';
-	echo '<td> '.$row['course_num'].' </td>';
+	echo '<td class="coursenum"> '.$row['course_num'].' </td>';
     echo '<td> '.$row['title'].' </td>';
-    echo '<td> '.$row['units'].' </td>';
-    echo '<td> '.$row['begin'].' </td>';
-    echo '<td> '.$row['end'].' </td>';
-    echo '<td> '.$row['room'].' </td>';
-    echo '<td> '.$row['instructor'].' </td>';
-    echo '<td> '.$row['semester'].' </td>'; 
     echo '</tr>';
     }
 echo '</table>';
@@ -37,15 +31,9 @@ $sql = mysql_query("select * from classData where instructor like '%$term%'");
 echo '<table>';
 while ($row = mysql_fetch_array($sql)){
 	echo '<tr>';
+	echo '<td> '.$row['instructor'].' </td>';
 	echo '<td> '.$row['course_num'].' </td>';
     echo '<td> '.$row['title'].' </td>';
-    echo '<td> '.$row['units'].' </td>';
-    echo '<td> '.$row['section'].' </td>';
-    echo '<td> '.$row['begin'].' </td>';
-    echo '<td> '.$row['end'].' </td>';
-    echo '<td> '.$row['room'].' </td>';
-    echo '<td> '.$row['instructor'].' </td>';
-    echo '<td> '.$row['semester'].' </td>'; 
     echo '</tr>';
     }
 echo '</table>';

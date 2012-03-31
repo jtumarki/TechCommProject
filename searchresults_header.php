@@ -9,7 +9,7 @@
 	<body>
 	<div id="header"><div id="title"><img src="images/bfs.png"></div></div>
 	<div id="navigation">
-		<form action="search.php" method="post">
+		<form action="searchstyled.php" method="post">
 		<input type="text" name="term" value="Professor or Course Number..." onfocus="if
 		(this.value==this.defaultValue) this.value='';"/>
 		<button class="glass" type="submit">Search</button>
