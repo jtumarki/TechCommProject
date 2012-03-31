@@ -5,7 +5,7 @@ mysql_select_db ("logindbthedrick", $con);
 $term = $_POST['term'];
 $parsed = str_replace('-','',$term);
  
-$sql = mysql_query("select * from classData where course_num like '%$parsed%' or title like '%$term%' or semester like '$term'");
+$sql = mysql_query("select * from courses where course_num like '%$parsed%' or course_name like '%$term%'");
 
 include 'searchresults_header.php';
 echo 'Showing results for ';
@@ -22,7 +22,7 @@ else{
 	while ($row = mysql_fetch_array($sql)){
 		echo '<tr>';
 		echo '<td class="coursenum"> '.$row['course_num'].' </td>';
-		echo '<td> '.$row['title'].' </td>';
+		echo '<td> '.$row['course_name'].' </td>';
 		echo '</tr>';
 		}
 	}
