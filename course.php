@@ -7,7 +7,7 @@ $course_num = $_GET['course'];
 if($course_num == NULL)
 	echo 'Please search a valid course.';
 else {
-	$sql = mysql_query("select * from classData where course_num='%$course_num%'");
+	$sql = mysql_query("select * from classData where course_num like '%$course_num%'");
 
 	echo "Course:  $course_num";
 
