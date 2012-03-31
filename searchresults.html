@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>BFS: Better Faculty Search</title>
+	<link rel="stylesheet" type="text/css" href="main.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	</head>
+	<body>
+	<div id="header"><div id="title"><img src="images/bfs.png"></div></div>
+	<div id="navigation">
+		<form action="search.php" method="post">
+		<input type="text" name="term" value="Professor or Course Number..." onfocus="if
+		(this.value==this.defaultValue) this.value='';"/>
+		<button class="glass" type="submit">Search</button>
+		</form>
+		<script>
+		$("input[type='text']").keyup(function(){
+
+			if ($(this).val() !== ''){
+				$(this).css('color', '#666')
+			} else {
+				$(this).css('color', '#cecece')
+			}
+
+		});
+		</script>
+	</div>
+	<div id="main">
+		<div class="full">
+			<h1>Search Results:</h1>
+			Showing # results for professor/course/teacher or course SEARCHTERM...</br>
+		</div>
+		<div class="left">
+			<h2>Courses:</h2>
+			<b>15-213</b> - <a href="#">Introduction to Computer Systems</a><br>
+			<b>15-214</b> - <a href="#">That class with Object Oriented Stuff.  Look it's a really long Class name.</a>
+		</div>
+		<div class="right">
+			<h2>Professors:</h2>
+			<b>CS</b> - Frank Pfenning <br>
+			<b>CS</b> - Dan Licata <br>
+			<b>CS</b> - Some guy with an unusually long name. <br>
+		</div>
+	</div>
+	<div id="footer"></div>
+	</body>
+</html>
