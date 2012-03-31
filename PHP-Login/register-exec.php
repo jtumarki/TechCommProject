@@ -96,7 +96,6 @@
 	//Check whether the query was successful or not
 	if($result) {
 		header("location: register-success.php");
-		exit();
 	}else {
 		die("Query failed insertion");
 	}

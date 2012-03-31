@@ -104,13 +104,17 @@ input {
 
 h1{
 	font-family: 'GillSans', sans-serif;
-	color: #4EAFD7;
+	color: #FFF;
 	font-size: 2em;
 	text-shadow: 1px 1px 3px #444;
+	font-weight:normal;
 }
 
 h2{
 	color: #F57E3C;
+	text-shadow: 1px 1px 3px #5d200d;
+	font-weight:normal;
+	letter-spacing: 1px;
 }
 
 /*#footer{
@@ -145,9 +149,10 @@ h2{
 	margin-top: 20px;
 }
 
-b{
-	color:  #E03C42;
+td.coursenum{
+	color: #4EAFD7;;
 	font-weight:bold;
+	width: 25%;
 }
 
 .footerseg{
