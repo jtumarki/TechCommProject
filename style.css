@@ -35,7 +35,7 @@ height: 64px;
 box-shadow: 0 1px 5px #333;
 }
 #container {
-width: 1000px;
+max-width: 1000px;
 margin: 0 auto -90px auto;
 clear: both;
 min-height: 85%;
@@ -43,6 +43,11 @@ min-height: 85%;
 #search {
 width: 500px;
 margin: 170px auto 0 auto;
+}
+#info {
+width: 90%;
+max-width: 1000px;
+margin: 50px auto 0 auto;
 }
 #footer {
 clear: both;
@@ -53,6 +58,9 @@ padding: 0 0 0 20px;
 clear: both;
 height: 90px;
 }
+.reviews {
+font-size: 16px;
+}
 a:link, a:visited, a:active {
 border: none;
 text-decoration: none;
@@ -60,6 +68,23 @@ color: #505050;
 }
 a:hover {
 color: #777;
+}
+span.rating {
+font: 18px/18px 'GillSans', sans-serif;
+color: #777;
+text-align: center;
+padding: 0 0 0 4px;
+margin: 0;
+border: none;
+}
+span.cname {
+font: 40px/50px 'GillSans', sans-serif;
+color: #FFF;
+text-align: center;
+padding: 0;
+margin: 0;
+border: none;
+text-shadow: 1px 1px 3px #444;
 }
 h1 {
 font: 48px/50px 'GillSans', sans-serif;
@@ -99,4 +124,35 @@ overflow: hidden;
 cursor: pointer;
 cursor: hand;
 float: right;
+}
+table {
+font-size: 18px;
+width: 90%;
+padding: 5px;
+margin: 15px auto;
+}
+td {
+padding: 5px;
+}
+tr.light {
+background: #f6efc9;
+vertical-align: top;
+}
+tr.dark {
+background: #ecdfb5;
+vertical-align: top;
+}
+td.star {
+width: 18%;
+}
+td.professor {
+width: 78%;
+}
+td.toggle {
+width: 3%;
+vertical-align: top;
+}
+td.comment {
+font-size: 16px;
+line-height: 24px;
 }
