@@ -8,19 +8,24 @@ $parsed = str_replace('-','',$term);
 $sql = mysql_query("select * from classData where course_num like '%$parsed%' or title like '%$term%' or semester like '$term'");
 
 include 'searchresults_header.php';
-echo 'Showing # results for ';
+echo 'Showing results for ';
 echo $term;
 echo '... </ br>';
 echo '</div>
 		<div class="left">
 			<h2>Courses:</h2>';
 echo '<table>';
-while ($row = mysql_fetch_array($sql)){
-	echo '<tr>';
-	echo '<td class="coursenum"> '.$row['course_num'].' </td>';
-    echo '<td> '.$row['title'].' </td>';
-    echo '</tr>';
-    }
+if(mysql_num_rows($sql) == 0){
+	echo 'There were no results.';
+}
+else{
+	while ($row = mysql_fetch_array($sql)){
+		echo '<tr>';
+		echo '<td class="coursenum"> '.$row['course_num'].' </td>';
+		echo '<td> '.$row['title'].' </td>';
+		echo '</tr>';
+		}
+	}
 echo '</table>';
 
 echo '</div>
@@ -29,6 +34,9 @@ echo '</div>
 			
 $sql = mysql_query("select * from classData where instructor like '%$term%'");
 echo '<table>';
+if(mysql_num_rows($sql) == 0){
+	echo 'There were no results.';
+}
 while ($row = mysql_fetch_array($sql)){
 	echo '<tr>';
 	echo '<td> '.$row['instructor'].' </td>';
