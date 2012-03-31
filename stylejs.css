@@ -1,0 +1,7 @@
+h2, h3, h4, h5, h6 {font-size: 0px;}
+.up {
+    background: url("images/up.gif") no-repeat center;
+}
+.down {
+    background: url("images/down.gif") no-repeat center;
+}
