@@ -7,7 +7,7 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
 	</head>
 	<body>
-	<div id="header"><div id="title"><img src="images/bfs.png"></div></div>
+	<div id="header"><div id="title"><a href="index.html"><img src="images/bfs.png" border="0"></a></div></div>
 	<div id="navigation">
 		<form action="searchstyled.php" method="post">
 		<input type="text" name="term" value="Professor or Course Number..." onfocus="if
