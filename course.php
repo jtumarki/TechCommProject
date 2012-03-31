@@ -1,4 +1,5 @@
 <?php
+//updating to fix git
 $con = mysql_connect ("logindbthedrick.db.7857300.hostedresource.com", "logindbthedrick","JsJt20!2tc221");
 mysql_select_db ("logindbthedrick", $con);
 
