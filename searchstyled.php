@@ -32,7 +32,7 @@ echo '</div>
 		<div class="right">
 			<h2>Professors:</h2>';
 			
-$sql = mysql_query("select * from classData where instructor like '%$term%'");
+$sql = mysql_query("select * from instructors where instructor like '%$term%'");
 echo '<table>';
 if(mysql_num_rows($sql) == 0){
 	echo 'There were no results.';
@@ -40,8 +40,6 @@ if(mysql_num_rows($sql) == 0){
 while ($row = mysql_fetch_array($sql)){
 	echo '<tr>';
 	echo '<td> '.$row['instructor'].' </td>';
-	echo '<td> '.$row['course_num'].' </td>';
-    echo '<td> '.$row['title'].' </td>';
     echo '</tr>';
     }
 echo '</table>';
