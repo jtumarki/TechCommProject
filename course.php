@@ -1,0 +1,24 @@
+<?php
+$con = mysql_connect ("logindbthedrick.db.7857300.hostedresource.com", "logindbthedrick","JsJt20!2tc221");
+mysql_select_db ("logindbthedrick", $con);
+
+$course_num = $_GET['course'];
+ 
+$sql = mysql_query("select * from classData where course_num like '%$course_num%'");
+
+echo 'Course:  $course_num';
+
+if(mysql_num_rows($sql) == 0){
+	echo 'This is not a valid course.';
+}
+else{
+	echo '<table>';
+	while ($row = mysql_fetch_array($sql)){
+		echo '<tr>';
+		echo '<td class="coursenum"> '.$row['course_num'].' </td>';
+		echo '<td> <a href="course.php?course='.$row['course_name']. '">' .$row['instructor'].'</a> </td>';
+		echo '</tr>';
+		}
+	echo '</table'>;
+	}
+?>

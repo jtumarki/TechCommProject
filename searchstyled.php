@@ -22,7 +22,7 @@ else{
 	while ($row = mysql_fetch_array($sql)){
 		echo '<tr>';
 		echo '<td class="coursenum"> '.$row['course_num'].' </td>';
-		echo '<td> '.$row['course_name'].' </td>';
+		echo '<td> <a href="course.php?course='.$row['course_num']. '">' .$row['course_name'].'</a> </td>';
 		echo '</tr>';
 		}
 	}
