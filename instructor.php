@@ -10,7 +10,7 @@ if(($f == NULL )|| ($l==NULL))
 else {
 	echo "$f";
 	echo "$l";
-	$sql = mysql_query("select * from classData where fname like '%$f%' or lname like '%$l%");
+	$sql = mysql_query("select * from classData where fname like '%$f%' or lname like '%$l%'");
 
 	echo "Instructor:  $fname $lname";
 
