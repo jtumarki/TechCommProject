@@ -39,7 +39,7 @@ if(mysql_num_rows($sql) == 0){
 }
 while ($row = mysql_fetch_array($sql)){
 	echo '<tr>';
-	echo '<td> <a href="instructor.php?fname='.$row['fname']. '&lname='.$row['lname']. '">' .$row['fname'].'</a> </td>';
+	echo '<td> <a href="instructor.php?fname='.$row['fname']. '&lname='.$row['lname']. '">' .$row['fname']. ' ' .$row['lname']. '</a> </td>';
     echo '</tr>';
     }
 echo '</table>';
