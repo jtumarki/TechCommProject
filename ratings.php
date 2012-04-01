@@ -107,6 +107,11 @@ if (isset($_POST['Submit1'])) {
 			}
 			
 		}
+		else{
+		
+			echo 'result query failed';
+		
+		}
 		
 		mysql_close($con);
 		
