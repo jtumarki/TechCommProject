@@ -8,7 +8,7 @@ $lname = $_GET['lname'];
 if($course_num == NULL)
 	echo 'Please search a valid instructor.';
 else {
-	$sql = mysql_query("select * from classData where fname like '%$fname%' and lname like '%$lname%");
+	$sql = mysql_query("select * from classData where fname like '%$fname%' or lname like '%$lname%");
 
 	echo "Instructor:  $fname $lname";
 
