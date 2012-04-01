@@ -2,13 +2,15 @@
 $con = mysql_connect ("logindbthedrick.db.7857300.hostedresource.com", "logindbthedrick","JsJt20!2tc221");
 mysql_select_db ("logindbthedrick", $con);
 
-$fname = $_GET['fname'];
-$lname = $_GET['lname'];
+$f = $_GET['fname'];
+$l = $_GET['lname'];
 
 if(($fname == NULL )|| ($lname==NULL))
 	echo 'Please search a valid instructor.';
 else {
-	$sql = mysql_query("select * from classData where fname like '%$fname%' or lname like '%$lname%");
+	echo "$f";
+	echo "$l";
+	$sql = mysql_query("select * from classData where fname like '%$f%' or lname like '%$l%");
 
 	echo "Instructor:  $fname $lname";
 
