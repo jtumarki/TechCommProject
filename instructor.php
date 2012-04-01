@@ -12,7 +12,7 @@ else {
 
 	echo "Instructor:  $fname $lname";
 
-	if(mysql_num_rows($sql) == 0){
+	if($sql == NULL){
 		echo 'This is not a valid instructor.  Please try again.';
 	}
 	else{
