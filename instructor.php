@@ -5,7 +5,7 @@ mysql_select_db ("logindbthedrick", $con);
 $fname = $_GET['fname'];
 $lname = $_GET['lname'];
 
-if($course_num == NULL)
+if(($fname == NULL )|| ($lname==NULL))
 	echo 'Please search a valid instructor.';
 else {
 	$sql = mysql_query("select * from classData where fname like '%$fname%' or lname like '%$lname%");
