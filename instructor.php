@@ -5,7 +5,7 @@ mysql_select_db ("logindbthedrick", $con);
 $f = $_GET['fname'];
 $l = $_GET['lname'];
 
-if(($fname == NULL )|| ($lname==NULL))
+if(($f == NULL )|| ($l==NULL))
 	echo 'Please search a valid instructor.';
 else {
 	echo "$f";
