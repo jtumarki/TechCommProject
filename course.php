@@ -12,7 +12,7 @@ else {
 
 	echo "Course:  $course_num";
 
-	if($sql == NULL){
+	if(mysql_num_rows($sql) == 0){
 		echo 'This is not a valid course.  Please try again.';
 	}
 	else{

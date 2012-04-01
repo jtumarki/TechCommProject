@@ -8,13 +8,11 @@ $l = $_GET['lname'];
 if(($f == NULL )|| ($l==NULL))
 	echo 'Please search a valid instructor.';
 else {
-	echo "$f";
-	echo "$l";
 	$sql = mysql_query("select * from classData where fname like '%$f%' or lname like '%$l%'");
 
-	echo "Instructor:  $fname $lname";
+	echo "Instructor:  $f $l";
 
-	if($sql == NULL){
+	if(mysql_num_rows($sql) == 0){
 		echo 'This is not a valid instructor.  Please try again.';
 	}
 	else{
