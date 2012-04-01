@@ -20,7 +20,7 @@ else {
 		while ($row = mysql_fetch_array($sql)){
 			echo '<tr>';
 			echo '<td class="coursenum"> '.$row['course_num'].' </td>';
-			echo '<td> '.$row['fname']. .$row['lname']. ' </td>';
+			echo '<td> '.$row['fname']. ' ' .$row['lname']. ' </td>';
 			echo '</tr>';
 			}
 		echo '</table>';
