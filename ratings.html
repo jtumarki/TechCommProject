@@ -61,6 +61,12 @@
 </table>
 <textarea rows="5" cols="20" name="comment" wrap="physical">Enter a comment here...</textarea>
 
+        <?php
+          require_once('recaptcha-php-1.11/recaptchalib.php');
+          $publickey = "6Lc8qs8SAAAAAP2FWFnGDAePwSiCP74JmJ4gxj2n"; // you got this from the signup page
+          echo recaptcha_get_html($publickey);
+        ?>
+
 <P>
 <Input type = "Submit" Name = "Submit1" Value = "Submit Ratings">
 </FORM>
