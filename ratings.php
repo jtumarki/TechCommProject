@@ -114,14 +114,12 @@ session_start();
 						
 						$currNum = $currNum + 1; //increment number of ratings by 1
 						
-						//calculate new averages
-						$currEasy = ($currEasy + $selected_easiness)/$currNum;
-						$currHelpful = ($currHelpful + $selected_helpful)/$currNum;
-						$currInterest = ($currInterest + $selected_interest)/$currNum;
-						$currTeaching = ($currTeaching + $selected_teaching)/$currNum;
-						$currCourse = ($currCourse + $selected_course)/$currNum;
-						
-						$avg_rating = ($currEasy + $currHelpful + $currInterest + $currTeaching + $currCourse)/$currNum;
+						//calculate new things
+						$currEasy = ($currEasy + $selected_easiness);
+						$currHelpful = ($currHelpful + $selected_helpful);
+						$currInterest = ($currInterest + $selected_interest);
+						$currTeaching = ($currTeaching + $selected_teaching);
+						$currCourse = ($currCourse + $selected_course);
 						
 						//echo ratings back for testing purposes
 						echo 'New Values: '.$currEasy. ' '.$currHelpful. ' ' .$currInterest. ' '.$currTeaching. ' '.$currCourse.' '.$currNum.'</br>';

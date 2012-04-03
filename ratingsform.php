@@ -7,7 +7,15 @@
 <link href='jquery.rating.css' type="text/css" rel="stylesheet"/>
 </head>
 <body>
-<Form name ="form1" Method ="POST" ACTION ="ratings.php">
+
+<?PHP
+	$course_num = _GET['course_num'];
+	$fname = _GET['fname'];
+	$lname = _GET['lname'];
+	$actionString = "ratings.php?course_num=".$course_num."&fname=".$fname."&lname=".$lname;
+	echo '<Form name ="form1" Method ="POST" ACTION ='.$actionString.'>';
+
+?>
 
 <table>
 <tr>
@@ -65,6 +73,7 @@
           require_once('recaptchalib.php');
           $publickey = "6Lc8qs8SAAAAAP2FWFnGDAePwSiCP74JmJ4gxj2n"; // you got this from the signup page
           echo recaptcha_get_html($publickey);
+		  
         ?>
 
 <P>
