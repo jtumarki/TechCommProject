@@ -117,7 +117,7 @@ session_start();
 						$currTeaching = ($currTeaching + $selected_teaching)/$currNum;
 						$currCourse = ($currCourse + $selected_course)/$currNum;
 						
-						$avg_rating = ($currEasy + $currHelpful + $currInterest + $currTeaching + $currCourse)/$currNum
+						$avg_rating = ($currEasy + $currHelpful + $currInterest + $currTeaching + $currCourse)/$currNum;
 						
 						//echo ratings back for testing purposes
 						echo 'New Values: '.$currEasy. ' '.$currHelpful. ' ' .$currInterest. ' '.$currTeaching. ' '.$currCourse.' '.$currNum.'</br>';
