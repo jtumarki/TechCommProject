@@ -8,12 +8,14 @@ $parsed = str_replace('-','',$term);
 $sql = mysql_query("select * from courses where course_num like '%$parsed%' or course_name like '%$term%'");
 
 include 'searchresults_header.php';
-echo 'Showing results for ';
+
+echo '<div id="main">';
+echo '<h1>Search Results... "';
 echo $term;
-echo '... </ br>';
-echo '</div>
-		<div class="left">
-			<h2>Courses:</h2>';
+echo '" </h1>';
+
+echo '<div class="left">
+			<h2>Courses</h2>';
 echo '<table>';
 if(mysql_num_rows($sql) == 0){
 	echo 'There were no results.';
@@ -27,10 +29,9 @@ else{
 		}
 	}
 echo '</table>';
-
 echo '</div>
 		<div class="right">
-			<h2>Professors:</h2>';
+			<h2>Professors</h2>';
 			
 $sql = mysql_query("select * from instructors where fname like '%$term%' or lname like '%$term%'");
 echo '<table>';
@@ -43,6 +44,7 @@ while ($row = mysql_fetch_array($sql)){
     echo '</tr>';
     }
 echo '</table>';
+echo '</div>';
 
 include 'searchresults_footer.php';
 ?>

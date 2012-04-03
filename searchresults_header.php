@@ -7,25 +7,5 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
 	</head>
 	<body>
-	<div id="header"><div id="title"><a href="index.html"><img src="images/bfs.png" border="0"></a></div></div>
-	<div id="navigation">
-		<form action="searchstyled.php" method="post">
-		<input type="text" name="term" value="Professor or Course Number..." onfocus="if
-		(this.value==this.defaultValue) this.value='';"/>
-		<button class="glass" type="submit">Search</button>
-		</form>
-		<script>
-		$("input[type='text']").keyup(function(){
-
-			if ($(this).val() !== ''){
-				$(this).css('color', '#666')
-			} else {
-				$(this).css('color', '#cecece')
-			}
-
-		});
-		</script>
-	</div>
-	<div id="main">
-		<div class="full">
-			<h1>Search Results:</h1>
+	
+	<div id="header"><a href="index.html"><div class="noborder"><img src="images/bfs.png" class="head" /></div></a></div>
