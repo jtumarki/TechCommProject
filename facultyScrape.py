@@ -30,5 +30,10 @@ def get_faculty():
     
 (f,l,a) = get_faculty()
 
+print "instruct = {"
+
 for x in xrange(len(a)):
-    print 'mysql_query("INSERT INTO instructors (fname,lname,dept) VALUES (' + "'" + f[x] + "'"+ ",'" + l[x] + "'" + ",'" + a[x] + "'"+ ')");'
+    print "'" + lname + "'" + ":" + "["+"'"+ fname + "'"+","+"'" + dept + "'"+"], "
+    #print 'mysql_query("INSERT INTO instructors (fname,lname,dept) VALUES (' + "'" + f[x] + "'"+ ",'" + l[x] + "'" + ",'" + a[x] + "'"+ ')");'
+	
+print "}"
