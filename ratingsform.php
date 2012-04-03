@@ -9,9 +9,9 @@
 <body>
 
 <?PHP
-	$course_num = _GET['course_num'];
-	$fname = _GET['fname'];
-	$lname = _GET['lname'];
+	$course_num = $_GET['course_num'];
+	$fname = $_GET['fname'];
+	$lname = $_GET['lname'];
 	$actionString = "ratings.php?course_num=".$course_num."&fname=".$fname."&lname=".$lname;
 	echo '<Form name ="form1" Method ="POST" ACTION ='.$actionString.'>';
 
