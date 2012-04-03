@@ -33,6 +33,8 @@ def get_faculty():
 instruct = {}
 
 for x in xrange(len(a)):
+	if(!instruct.keys().contains(l[x])):
+		instruct[l[x]] = []
 	instruct[l[x]].append([f[x],tokenize.generate_tokens(a[x])])
 	#print '"' + l[x] + '"' + ":" + "["+'"'+ f[x] + '"'+","+'"' + a[x] + '"'+"], "
     #print 'mysql_query("INSERT INTO instructors (fname,lname,dept) VALUES (' + "'" + f[x] + "'"+ ",'" + l[x] + "'" + ",'" + a[x] + "'"+ ')");'
