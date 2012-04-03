@@ -45,7 +45,7 @@ session_start();
 			$lname = $_GET['lname'];
 			
 			//need to get username from current session
-			$username = $_SESSION['SESS_MEMBER_ID'];
+			$username = $_SESSION['SESS_USERNAME'];
 			echo 'username: '.$username.'</br>';
 
 			if ($selected_easiness != '') {
@@ -157,7 +157,7 @@ session_start();
 				}
 				else{
 				
-					echo 'result query failed';
+					echo 'result query for rating failed';
 				
 				}
 					
