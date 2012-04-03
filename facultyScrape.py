@@ -1,3 +1,4 @@
+import tokenize
 import httplib2
 from BeautifulSoup import BeautifulSoup
 
@@ -32,7 +33,7 @@ def get_faculty():
 instruct = {}
 
 for x in xrange(len(a)):
-	instruct[l[x]].append([f[x],tokenize.generate_tokens(a[x]]))
+	instruct[l[x]].append([f[x],tokenize.generate_tokens(a[x])])
 	#print '"' + l[x] + '"' + ":" + "["+'"'+ f[x] + '"'+","+'"' + a[x] + '"'+"], "
     #print 'mysql_query("INSERT INTO instructors (fname,lname,dept) VALUES (' + "'" + f[x] + "'"+ ",'" + l[x] + "'" + ",'" + a[x] + "'"+ ')");'
 	
