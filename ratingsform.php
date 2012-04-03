@@ -59,7 +59,7 @@
 </tr>
 
 </table>
-<textarea rows="5" cols="20" name="comment" wrap="physical">Enter a comment here...</textarea>
+<textarea rows="5" cols="20" name="comment" wrap="physical"></textarea>
 
         <?php
           require_once('recaptchalib.php');
