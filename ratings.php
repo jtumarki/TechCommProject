@@ -92,6 +92,10 @@ session_start();
 				//add 1 to current num_ratings when inserting back in
 				
 				//Create query for rating
+				echo 'course number: '.$course_num;
+				echo ' first name: '.$fname;
+				echo ' last name: '.$lname.'</br>';
+				
 				$qry="SELECT * FROM ratings WHERE course_num = '$course_num' AND fname = '$fname' AND lname = '$lname' ";
 				$result=mysql_query($qry);
 				
