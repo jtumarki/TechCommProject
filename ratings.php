@@ -154,24 +154,24 @@ session_start();
 
 						echo '1 record added </br>';
 					
-					}
-					
 				}
 				else{
 				
 					echo 'result query failed';
 				
 				}
-				
-				mysql_close($con);
-				
+					
 			}
 			else{ //if something has not been checked, then refresh and print an error
 			
-				echo 'Not all fields were checked. Please select a value for all rating categories </br>';
+			echo 'Not all fields were checked. Please select a value for all rating categories </br>';
 			
 			}
-			
+				
+			mysql_close($con);
+				
 		}
+
+			
 	}	
 ?>
