@@ -15,7 +15,6 @@ session_start();
 
 		//NEED TO ADD: PUTTING COMMENT FROM TEXT BOX INTO THE COMMENTS DATABASE.
 
-
 		if (isset($_POST['Submit1'])) {
 
 			//checking of captcha
@@ -96,7 +95,7 @@ session_start();
 				echo ' first name: '.$fname;
 				echo ' last name: '.$lname.'</br>';
 				
-				$qry="SELECT * FROM ratings WHERE course_num = '$course_num' AND fname = '$fname' AND lname = '$lname' ";
+				$qry="SELECT * FROM ratings WHERE course_num LIKE '$course_num' AND fname LIKE '$fname' AND lname LIKE '$lname' ";
 				$result=mysql_query($qry);
 				
 				//do some calculations
