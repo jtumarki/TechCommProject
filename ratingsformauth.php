@@ -21,7 +21,7 @@ session_start();
 		echo '</head>';
 		echo '<body>';
 		
-		$actionString = "ratings.php?course_num=".$course_num."&fname=".$fname."&lname=".$lname;
+		$actionString = "ratingsformauth.php?course_num=".$course_num."&fname=".$fname."&lname=".$lname;
 		echo '<Form name ="form1" Method ="POST" ACTION ='.$actionString.'>';
 		
 		echo '<table>';
