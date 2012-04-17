@@ -97,6 +97,7 @@ echo '</td>';
 echo '</tr>';
 echo '</table>';
 
+include "ratingsformauth.php";
 include "comments_footer.php";
 ?>
 
