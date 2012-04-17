@@ -123,13 +123,20 @@ session_start();
 						//echo ratings back for testing purposes
 						echo 'New Values: '.$currEasy. ' '.$currHelpful. ' ' .$currInterest. ' '.$currTeaching. ' '.$currCourse.' '.$currNum.'</br>';
 						
+						//delete row from table vefore we instert it back in
+						$deletesql = "DELETE FROM rating WHERE fname='$fname' AND lname='$lname' AND course_num = '$course_num'";
+						if (!mysql_query($deletesql,$con))
+						{
+							die('Error: ' . mysql_error());
+						}
+						
 						//insert proper info back into table (and display new stuff? refresh page?)
-						$sql="INSERT INTO rating (course_num, fname, lname, easy, help, interest, teach, course, ratings)
+						$insertsql="INSERT INTO rating (course_num, fname, lname, easy, help, interest, teach, course, ratings)
 						VALUES
 						('$course_num', '$fname', '$lname', '$currEasy','$currHelpful','$currInterest', '$currTeaching', '$currCourse', '$currNum')";
 						
 						
-						if (!mysql_query($sql,$con))
+						if (!mysql_query($insertsql,$con))
 						{
 							die('Error: ' . mysql_error());
 						}
