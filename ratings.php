@@ -114,17 +114,17 @@ session_start();
 						$currNum = $currNum + 1; //increment number of ratings by 1
 						
 						//calculate new things
-						$currEasy = ($currEasy + $selected_easiness);
-						$currHelpful = ($currHelpful + $selected_helpful);
-						$currInterest = ($currInterest + $selected_interest);
-						$currTeaching = ($currTeaching + $selected_teaching);
-						$currCourse = ($currCourse + $selected_course);
+						$currEasy = ($currEasy + $selected_easiness)/ $currNum;
+						$currHelpful = ($currHelpful + $selected_helpful) /$currNum;
+						$currInterest = ($currInterest + $selected_interest) /$currNum;
+						$currTeaching = ($currTeaching + $selected_teaching) /$currNum;
+						$currCourse = ($currCourse + $selected_course)/ $currNum;
 						
 						//echo ratings back for testing purposes
 						echo 'New Values: '.$currEasy. ' '.$currHelpful. ' ' .$currInterest. ' '.$currTeaching. ' '.$currCourse.' '.$currNum.'</br>';
 						
 						//insert proper info back into table (and display new stuff? refresh page?)
-						$sql="INSERT INTO ratings (course_num, fname, lname, easy, help, interest, teach, course, ratings)
+						$sql="INSERT INTO rating (course_num, fname, lname, easy, help, interest, teach, course, ratings)
 						VALUES
 						('$course_num', '$fname', '$lname', '$currEasy','$currHelpful','$currInterest', '$currTeaching', '$currCourse', '$currNum')";
 						
