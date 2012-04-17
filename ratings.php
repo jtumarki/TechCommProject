@@ -95,7 +95,7 @@ session_start();
 				echo ' first name: '.$fname;
 				echo ' last name: '.$lname.'</br>';
 				
-				$qry="SELECT * FROM ratings WHERE course_num LIKE '$course_num' AND fname LIKE '$fname' AND lname LIKE '$lname' ";
+				$qry="SELECT * FROM rating WHERE course_num LIKE '$course_num' AND fname LIKE '$fname' AND lname LIKE '$lname' ";
 				$result=mysql_query($qry);
 				
 				//do some calculations
