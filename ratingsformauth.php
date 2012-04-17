@@ -10,7 +10,6 @@ session_start();
 		$lname = $_GET['lname'];
 		echo 'Go ahead and leave a comment!';
 		
-		
 		$actionString = "ratings.php?course_num=".$course_num."&fname=".$fname."&lname=".$lname;
 		echo '<Form name ="form1" Method ="POST" ACTION ='.$actionString.'>';
 		
