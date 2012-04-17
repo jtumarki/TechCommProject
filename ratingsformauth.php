@@ -1,4 +1,4 @@
-session_start();
+<?PHP
 	if (!isset($_SESSION['SESS_MEMBER_ID'])){
 		echo 'Please login to comment.';
 	}
@@ -73,3 +73,4 @@ session_start();
 		
 	}
 	
+?>
