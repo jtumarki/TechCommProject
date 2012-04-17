@@ -45,6 +45,7 @@ echo '<span class="cname">'.$course_num.' - '.$course_name.'</span>';
 
 echo '<table>';
 echo '<tr class="light">';
+$star_string = "WUTWUT";
 if (mysql_num_rows($sql_ratings) == 0) {
 	$star_string = "No Rating";
 }
