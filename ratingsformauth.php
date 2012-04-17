@@ -10,16 +10,6 @@ session_start();
 		$lname = $_GET['lname'];
 		echo 'Go ahead and leave a comment!';
 		
-		//echo all of the html from ratingsform.php
-		echo '<html>';
-		echo '<head>';
-		echo '<title>Radio Buttons</title>';
-		echo '<script src=\'jquery.js\' type="text/javascript"></script>';
-		echo '<script src=\'jquery.MetaData.js\' type="text/javascript" language="javascript"></script>';
-		echo '<script src=\'jquery.rating.js\' type="text/javascript" language="javascript"></script>';
-		echo '<link href=\'jquery.rating.css\' type="text/css" rel="stylesheet"/>';
-		echo '</head>';
-		echo '<body>';
 		
 		$actionString = "ratings.php?course_num=".$course_num."&fname=".$fname."&lname=".$lname;
 		echo '<Form name ="form1" Method ="POST" ACTION ='.$actionString.'>';
@@ -83,9 +73,6 @@ session_start();
 		echo '<P>';
 		echo '<Input type = "Submit" Name = "Submit1" Value = "Submit Ratings">';
 		echo '</FORM>';
-
-		echo '</body>';
-		echo '</html>';
 		
 	}
 	
