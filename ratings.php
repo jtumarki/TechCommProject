@@ -159,6 +159,38 @@ session_start();
 
 						
 					}
+					else{
+						
+						//add professor into database if it doesn't currently exist
+						//insert proper info back into table (and display new stuff? refresh page?)
+						$echo 'new teacher added to database';
+						$currNum = 1;
+						$insertsql="INSERT INTO rating (course_num, fname, lname, easy, help, interest, teach, course, ratings)
+						VALUES
+						('$course_num', '$fname', '$lname', '$selected_easiness','$selected_helpful','$selected_interest', '$selected_teaching', '$selected_course', '$currNum')";
+							
+						if (!mysql_query($insertsql,$con))
+						{
+							die('Error: ' . mysql_error());
+						}
+						
+						//insert comment into table if necessary
+						if($user_comment != ''){
+						
+							$ratingAvg = ($selected_easiness + $selected_helpful + $selected_interest + $selected_teaching + $selected_course)/5;
+							$sqlComments = "INSERT INTO comments (course_num, fname, lname, username, comment, rating)
+							VALUES
+							('$course_num', '$fname', '$lname', '$username', '$user_comment', '$ratingAvg')";
+							
+							if (!mysql_query($sqlComments,$con))
+							{
+							die('Error: ' . mysql_error());
+							}
+							
+						}
+					
+					
+					}
 
 						echo '1 record added </br>';
 					
